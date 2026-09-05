@@ -1,4 +1,5 @@
 using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Shared.Interfaces;
 using BurgerX.Application.Shared.Mediator;
 using BurgerX.Infrastructure.Persistence;
 using BurgerX.Infrastructure.Persistence.Daos;
@@ -18,6 +19,8 @@ public static class Dependencies
             options.UseSqlite(configuration.GetConnectionString("Default"))
         );
 
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        
         services.AddAppMediator();
 
         services.AddScoped<IProductRepository, ProductRepository>();

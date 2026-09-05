@@ -1,8 +1,10 @@
+using BurgerX.Application.Shared.Interfaces;
+
 using Mediator;
 
 namespace BurgerX.Application.Catalog.Commands.CreateProduct;
 
-public record CreateProductCommand : IRequest<Guid>
+public record CreateProductCommand : IRequest<Guid>, ITranslacionalRequest
 {
     public required string Name { get; set; }
     public required string Description { get; set; }

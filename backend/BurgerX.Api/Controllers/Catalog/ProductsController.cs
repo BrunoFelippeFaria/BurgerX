@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 using BurgerX.Application.Catalog.Commands.CreateProduct;
 using BurgerX.Application.Catalog.Queries.GetAllProducts;
 
@@ -9,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerX.Api.Controllers.Catalog;
 
+[ApiController]
 [Route("catalog/products")]
 public class ProductsController (IMediator mediator) : ControllerBase
 {
