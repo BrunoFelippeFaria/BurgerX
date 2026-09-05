@@ -3,6 +3,9 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+#db
+burgerx.db
+
 # dotenv files
 .env
 
