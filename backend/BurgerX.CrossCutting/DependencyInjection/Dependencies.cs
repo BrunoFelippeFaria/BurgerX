@@ -1,4 +1,6 @@
+using BurgerX.Application.Catalog.Interfaces;
 using BurgerX.Infrastructure.Persistence;
+using BurgerX.Infrastructure.Persistence.Repositories;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,7 +15,9 @@ public static class Dependencies
         services.AddDbContext<AppDbContext>(options =>
             options.UseSqlite(configuration.GetConnectionString("Default"))
         );
-        
+
+        services.AddScoped<IProductRepository, ProductRepository>();
+
         return services;
     }
 }
