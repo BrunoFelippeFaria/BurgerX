@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BurgerX.Domain\BurgerX.Domain.csproj" />
+    <ProjectReference Include="..\BurgerX.Application\BurgerX.Application.csproj" />
+    <ProjectReference Include="..\BurgerX.Infrastructure\BurgerX.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
