@@ -4,12 +4,17 @@ using Mediator;
 
 namespace BurgerX.Application.Catalog.Commands.UpdateProduct;
 
-public class UpdateProductCommandHandler (IProductRepository productRepository) : IRequestHandler<UpdateProductCommand, Unit>
+public class UpdateProductCommandHandler (IProductRepository productRepository, IProductDao productDao) 
+    : IRequestHandler<UpdateProductCommand, Unit>
 {
     private readonly IProductRepository _productRepository = productRepository;
+    private readonly IProductDao _productDao = productDao;
 
     public async ValueTask<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
+        if (await _productDao.NameExists(request.Name, request.Id))
+            throw new ProductNameAlreadyExistisException(request.Name);
+
         var product = await _productRepository.GetById(request.Id)
             ?? throw new ProductNotFoundException(request.Id);
 

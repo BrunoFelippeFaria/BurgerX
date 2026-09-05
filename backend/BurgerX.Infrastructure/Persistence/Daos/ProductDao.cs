@@ -2,6 +2,7 @@
 
 using BurgerX.Application.Catalog.Dtos;
 using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Infrastructure.Extensions;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -37,5 +38,12 @@ public class ProductDao (AppDbContext context) : IProductDao
                 Description = p.Description,
                 Price = p.Price
             }).FirstOrDefaultAsync();
+    }
+
+    public async Task<bool> NameExists(string name, Guid? ignoredId = null)
+    {
+        return await _context.Products
+            .WhereIf(ignoredId.HasValue, p => p.Id != ignoredId)
+            .AnyAsync(p => p.Name == name);
     }
 }
