@@ -1,0 +1,33 @@
+
+using System.ComponentModel.DataAnnotations;
+
+using FluentValidation;
+
+using Mediator;
+
+namespace BurgerX.Application.Shared.Mediator.Behaviours;
+
+public class ValidationBehaviour<TMessage, TResponse>(
+    IEnumerable<IValidator<TMessage>> validators
+) : IPipelineBehavior<TMessage, TResponse>
+    where TMessage : IMessage
+{
+    public async ValueTask<TResponse> Handle(TMessage message, MessageHandlerDelegate<TMessage, TResponse> next, CancellationToken cancellationToken)
+    {
+        var context = new ValidationContext<IMessage>(message);
+
+        var validationResults = await Task.WhenAll(
+            validators.Select(v => v.ValidateAsync(context, cancellationToken))
+        );
+
+        var failures = validationResults
+            .SelectMany(r => r.Errors)
+            .Where(f => f is not null)
+            .ToList();
+
+        if (failures.Count > 0)
+            throw new FluentValidation.ValidationException(failures);
+
+        return await next(message, cancellationToken);
+    }
+}

@@ -28,6 +28,22 @@ public class ExceptionHandler(RequestDelegate next)
 
             await HandleError(context, statusCode, ex.Message, ex.Code);
         }
+
+        catch (FluentValidation.ValidationException ex)
+        {
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+
+            await context.Response.WriteAsJsonAsync(new
+            {
+                code = "validation_error",
+                errors = ex.Errors.Select(e => new
+                {
+                    field = e.PropertyName,
+                    message = e.ErrorMessage
+                })
+            });        
+
+        }
     }
     
     private static async Task HandleError(HttpContext context, HttpStatusCode statusCode, string error, string code)
