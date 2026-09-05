@@ -4,6 +4,14 @@
     <ProjectReference Include="..\BurgerX.Domain\BurgerX.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mediator.Abstractions" Version="3.0.*" />
+    <PackageReference Include="Mediator.SourceGenerator" Version="3.0.*">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
