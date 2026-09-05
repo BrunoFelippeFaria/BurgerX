@@ -5,5 +5,6 @@ namespace BurgerX.Application.Catalog.Interfaces;
 
 public interface IProductDao
 {
-    public Task<IEnumerable<ProductListDto>> GetAll();
+    Task<IEnumerable<ProductListDto>> GetAll();
+    Task<ProductDto?> GetById(Guid id);
 }

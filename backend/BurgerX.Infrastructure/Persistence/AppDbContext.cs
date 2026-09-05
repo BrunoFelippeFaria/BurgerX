@@ -1,4 +1,5 @@
 using BurgerX.Domain.Entities;
+using BurgerX.Infrastructure.Persistence.EntityConfiguration;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +9,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(Product).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductConfiguration).Assembly);
     }
 
     public DbSet<Product> Products { get; set; }
