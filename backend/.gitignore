@@ -5,6 +5,8 @@
 
 #db
 burgerx.db
+burgerx.db-shm
+burgerx.db-wal
 
 # dotenv files
 .env
