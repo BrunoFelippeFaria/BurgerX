@@ -1,3 +1,4 @@
+using BurgerX.Application.Catalog.Exceptions;
 using BurgerX.Application.Catalog.Interfaces;
 using Mediator;
 
@@ -9,9 +10,10 @@ public class UpdateProductCommandHandler (IProductRepository productRepository) 
 
     public async ValueTask<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
-        var product = await _productRepository.GetById(request.Id);
+        var product = await _productRepository.GetById(request.Id)
+            ?? throw new ProductNotFoundException(request.Id);
 
-        product!.Name = request.Name;
+        product.Name = request.Name;
         product.Description = request.Description;
         product.Price = request.Price;
 

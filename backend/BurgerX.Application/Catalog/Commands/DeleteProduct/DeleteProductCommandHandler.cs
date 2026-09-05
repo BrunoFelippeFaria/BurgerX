@@ -1,4 +1,5 @@
 
+using BurgerX.Application.Catalog.Exceptions;
 using BurgerX.Application.Catalog.Interfaces;
 
 using Mediator;
@@ -11,9 +12,10 @@ public class DeleteProductCommandHandler(IProductRepository productRepository) :
 
     public async ValueTask<Unit> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
     {
-        var product = await _productRepository.GetById(request.Id);
-
-        product!.Delete();
+        var product = await _productRepository.GetById(request.Id)
+            ?? throw new ProductNotFoundException(request.Id);
+            
+        product.Delete();
 
         return Unit.Value;
     }
