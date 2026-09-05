@@ -16,7 +16,7 @@ public class CreateProductCommandHandler (IProductRepository productRepository, 
     public async ValueTask<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         if (await _productDao.NameExists(request.Name))
-            throw new ProductNameAlreadyExistisException(request.Name);
+            throw new ProductNameAlreadyExistsException(request.Name);
 
         var product = new Product
         {

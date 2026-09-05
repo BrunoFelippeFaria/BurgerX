@@ -13,7 +13,7 @@ public class UpdateProductCommandHandler (IProductRepository productRepository, 
     public async ValueTask<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
         if (await _productDao.NameExists(request.Name, request.Id))
-            throw new ProductNameAlreadyExistisException(request.Name);
+            throw new ProductNameAlreadyExistsException(request.Name);
 
         var product = await _productRepository.GetById(request.Id)
             ?? throw new ProductNotFoundException(request.Id);
