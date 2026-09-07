@@ -1,6 +1,6 @@
-using BurgerX.Application.Catalog.Commands.DeleteProduct;
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Commands.Delete;
+using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Domain.Entities;
 
 using FluentAssertions;

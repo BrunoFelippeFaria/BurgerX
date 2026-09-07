@@ -1,8 +1,8 @@
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products.Exceptions;
+
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.UpdateProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Update;
 
 public class UpdateProductCommandHandler (IProductRepository productRepository, IProductDao productDao) 
     : IRequestHandler<UpdateProductCommand, Unit>

@@ -1,6 +1,6 @@
 using BurgerX.Domain.Exceptions;
 
-namespace BurgerX.Application.Catalog.Exceptions;
+namespace BurgerX.Application.Catalog.Products.Exceptions;
 
 public class ProductNotFoundException(Guid id) : NotFoundException($"Produto {id} não encontrado.")
 {

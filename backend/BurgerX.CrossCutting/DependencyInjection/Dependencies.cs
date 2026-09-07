@@ -1,5 +1,5 @@
-using BurgerX.Application.Catalog.Commands.CreateProduct;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Commands.Create;
 using BurgerX.Application.Orders.Interfaces;
 using BurgerX.Application.Shared.Interfaces;
 using BurgerX.Application.Shared.Mediator;

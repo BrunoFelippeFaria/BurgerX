@@ -1,11 +1,9 @@
-
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Domain.Entities;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.CreateProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Create;
 
 public class CreateProductCommandHandler (IProductRepository productRepository, IProductDao productDao) 
     : IRequestHandler<CreateProductCommand, Guid>

@@ -1,10 +1,8 @@
-
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products.Exceptions;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.DeleteProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Delete;
 
 public class DeleteProductCommandHandler(IProductRepository productRepository) : IRequestHandler<DeleteProductCommand, Unit>
 {

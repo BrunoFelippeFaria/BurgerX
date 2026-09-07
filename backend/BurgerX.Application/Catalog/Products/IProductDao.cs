@@ -1,6 +1,7 @@
-using BurgerX.Application.Catalog.Dtos;
+using BurgerX.Application.Catalog.Products.Queries.GetAll;
+using BurgerX.Application.Catalog.Products.Queries.GetById;
 
-namespace BurgerX.Application.Catalog.Interfaces;
+namespace BurgerX.Application.Catalog.Products;
 
 public interface IProductDao
 {

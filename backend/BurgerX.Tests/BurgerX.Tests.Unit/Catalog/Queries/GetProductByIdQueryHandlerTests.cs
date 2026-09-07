@@ -1,7 +1,6 @@
-using BurgerX.Application.Catalog.Dtos;
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
-using BurgerX.Application.Catalog.Queries.GetProductById;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Exceptions;
+using BurgerX.Application.Catalog.Products.Queries.GetById;
 
 using FluentAssertions;
 

@@ -2,7 +2,7 @@ using BurgerX.Application.Shared.Interfaces;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.UpdateProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Update;
 
 public record UpdateProductCommand : IRequest<Unit>, ITranslacionalRequest
 {

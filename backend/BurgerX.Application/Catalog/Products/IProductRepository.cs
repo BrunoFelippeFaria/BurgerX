@@ -1,6 +1,6 @@
 using BurgerX.Domain.Entities;
 
-namespace BurgerX.Application.Catalog.Interfaces;
+namespace BurgerX.Application.Catalog.Products;
 
 public interface IProductRepository
 {

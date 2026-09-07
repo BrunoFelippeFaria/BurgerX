@@ -4,11 +4,11 @@ using FluentValidation;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.UpdateProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Create;
 
-public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
+public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
 {
-    public UpdateProductCommandValidator()
+    public CreateProductCommandValidator()
     {
         RuleFor(x => x.Name)
             .NotEmpty()

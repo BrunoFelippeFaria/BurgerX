@@ -1,4 +1,4 @@
-namespace BurgerX.Application.Catalog.Dtos;
+namespace BurgerX.Application.Catalog.Products.Queries.GetById;
 
 public class ProductDto
 {

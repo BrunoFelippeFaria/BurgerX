@@ -1,10 +1,8 @@
-
-using BurgerX.Application.Catalog.Dtos;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Queries.GetAllProducts;
+namespace BurgerX.Application.Catalog.Products.Queries.GetAll;
 
 public class GetAllProductsQueryHandler (IProductDao productDao) : IRequestHandler<GetAllProductsQuery, IEnumerable<ProductListDto>>
 {

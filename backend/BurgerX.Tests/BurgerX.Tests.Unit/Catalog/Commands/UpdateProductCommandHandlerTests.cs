@@ -1,6 +1,6 @@
-using BurgerX.Application.Catalog.Commands.UpdateProduct;
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Commands.Update;
+using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Domain.Entities;
 
 using FluentAssertions;

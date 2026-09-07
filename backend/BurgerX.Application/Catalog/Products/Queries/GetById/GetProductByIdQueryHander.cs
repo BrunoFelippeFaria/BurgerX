@@ -1,11 +1,8 @@
-
-using BurgerX.Application.Catalog.Dtos;
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products.Exceptions;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Queries.GetProductById;
+namespace BurgerX.Application.Catalog.Products.Queries.GetById;
 
 public class GetProductByIdQueryHandler(IProductDao productDao) : IRequestHandler<GetProductByIdQuery, ProductDto>
 {

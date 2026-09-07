@@ -1,5 +1,5 @@
-using BurgerX.Application.Catalog.Exceptions;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Application.Orders.Interfaces;
 using BurgerX.Domain.Entities.Orders;
 using BurgerX.Domain.Enums;

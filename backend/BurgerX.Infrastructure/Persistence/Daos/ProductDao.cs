@@ -1,7 +1,6 @@
-
-
-using BurgerX.Application.Catalog.Dtos;
-using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Catalog.Products;
+using BurgerX.Application.Catalog.Products.Queries.GetAll;
+using BurgerX.Application.Catalog.Products.Queries.GetById;
 using BurgerX.Infrastructure.Extensions;
 
 using Microsoft.EntityFrameworkCore;

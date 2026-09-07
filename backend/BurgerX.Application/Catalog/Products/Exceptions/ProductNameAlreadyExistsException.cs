@@ -1,6 +1,6 @@
 using BurgerX.Domain.Exceptions;
 
-namespace BurgerX.Application.Catalog.Exceptions;
+namespace BurgerX.Application.Catalog.Products.Exceptions;
 
 public class ProductNameAlreadyExistsException(string name) 
     : ConflictException($"já existe um produto com o nome {name}.")

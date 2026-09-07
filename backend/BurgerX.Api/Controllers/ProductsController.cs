@@ -1,8 +1,8 @@
-using BurgerX.Application.Catalog.Commands.CreateProduct;
-using BurgerX.Application.Catalog.Commands.DeleteProduct;
-using BurgerX.Application.Catalog.Commands.UpdateProduct;
-using BurgerX.Application.Catalog.Queries.GetAllProducts;
-using BurgerX.Application.Catalog.Queries.GetProductById;
+using BurgerX.Application.Catalog.Products.Commands.Create;
+using BurgerX.Application.Catalog.Products.Commands.Delete;
+using BurgerX.Application.Catalog.Products.Commands.Update;
+using BurgerX.Application.Catalog.Products.Queries.GetAll;
+using BurgerX.Application.Catalog.Products.Queries.GetById;
 
 using Mediator;
 

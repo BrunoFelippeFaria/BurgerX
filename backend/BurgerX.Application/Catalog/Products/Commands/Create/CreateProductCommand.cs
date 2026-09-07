@@ -2,7 +2,7 @@ using BurgerX.Application.Shared.Interfaces;
 
 using Mediator;
 
-namespace BurgerX.Application.Catalog.Commands.CreateProduct;
+namespace BurgerX.Application.Catalog.Products.Commands.Create;
 
 public record CreateProductCommand : IRequest<Guid>, ITranslacionalRequest
 {
