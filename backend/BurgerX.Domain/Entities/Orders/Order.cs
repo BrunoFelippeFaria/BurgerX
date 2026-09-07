@@ -21,4 +21,12 @@ public class Order : EntityBase
     {
         _items.Add(item);
     }
+
+    public void CalculateTotal()
+    {
+        Total = Items.Sum(i => i.Quantity * i.Price);
+
+        if (Discount > 0)
+            Total -= Total * (Discount / 100);
+    }
 }

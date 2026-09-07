@@ -1,0 +1,17 @@
+using BurgerX.Application.Orders.Dtos;
+using BurgerX.Application.Shared.Interfaces;
+using BurgerX.Domain.Enums;
+using BurgerX.Domain.ValueObjects;
+
+using Mediator;
+
+namespace BurgerX.Application.Orders.Commands.CreateOrder;
+
+public record CreateOrderCommand(
+    string Customer,
+    decimal Discount,
+    OrderType Type,
+    OrderStatus Status,
+    Address? DeliveryAddress,
+    IEnumerable<OrderItemDto> Items
+) : IRequest<Guid>, ITranslacionalRequest;
