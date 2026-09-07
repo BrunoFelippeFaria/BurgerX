@@ -15,6 +15,7 @@ public class OrderDao(AppDbContext context) : IOrderDao
         return await _context.Orders
             .AsNoTracking()
             .Select(o => new OrderListDto(
+                o.Id,
                 o.Number,
                 o.Customer,
                 o.Type,
@@ -23,9 +24,28 @@ public class OrderDao(AppDbContext context) : IOrderDao
             )).ToArrayAsync();
     }
 
-    public Task<OrderDto> GetById(Guid id)
+    public async Task<OrderDto?> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        return await _context.Orders
+            .AsNoTracking()
+            .Where(o => o.Id == id)
+            .Select(o => new OrderDto(
+                o.Id,
+                o.Number,
+                o.Customer,
+                o.Discount,
+                o.Type,
+                o.Total,
+                o.Status,
+                o.DeliveryAddress,
+                o.Items.Select(i => new OrderItemDto(
+                    i.Product.Name,
+                    i.Quantity,
+                    i.Price,
+                    i.Note
+                ))
+            ))
+            .FirstOrDefaultAsync();
     }
 
     public async Task<int> GetNewNumber()

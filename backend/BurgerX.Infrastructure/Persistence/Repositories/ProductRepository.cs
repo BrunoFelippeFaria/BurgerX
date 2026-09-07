@@ -1,3 +1,4 @@
+
 using BurgerX.Application.Catalog.Interfaces;
 using BurgerX.Domain.Entities;
 
@@ -18,5 +19,12 @@ public class ProductRepository(AppDbContext context) : IProductRepository
     {
         return await _context.Products
             .FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    public async Task<IReadOnlyCollection<Product>> GetByIds(IEnumerable<Guid> ids)
+    {
+        return await _context.Products
+            .Where(p => ids.Contains(p.Id))
+            .ToArrayAsync();
     }
 }

@@ -1,3 +1,5 @@
+using BurgerX.Application.Catalog.Exceptions;
+using BurgerX.Application.Catalog.Interfaces;
 using BurgerX.Application.Orders.Interfaces;
 using BurgerX.Domain.Entities.Orders;
 using BurgerX.Domain.Enums;
@@ -7,15 +9,34 @@ using Mediator;
 
 namespace BurgerX.Application.Orders.Commands.CreateOrder;
 
-public class CreateOrderCommandHandler(IOrderRepository orderRepository, IOrderDao orderDao) 
+public class CreateOrderCommandHandler(
+    IOrderRepository orderRepository,
+    IOrderDao orderDao,
+    IProductRepository productRepository
+) 
     : IRequestHandler<CreateOrderCommand, Guid>
 {
     private readonly IOrderRepository _orderRepository = orderRepository;
     private readonly IOrderDao _orderDao = orderDao;
+    private readonly IProductRepository _productRepository = productRepository;
 
     public async ValueTask<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         Guid orderId = Guid.NewGuid();
+
+        var productIds = request.Items
+            .Select(x => x.ProductId)
+            .Distinct();
+
+        var products = await _productRepository.GetByIds(productIds);
+        var productsById = products.ToDictionary(p => p.Id);
+
+        var missingIds = productIds
+            .Except(products.Select(x => x.Id))
+            .ToList();
+
+        if (missingIds.Count > 0)
+            throw new ProductsNotFoundException(missingIds);
 
         var order = new Order
         {
@@ -43,6 +64,7 @@ public class CreateOrderCommandHandler(IOrderRepository orderRepository, IOrderD
             };
         }
 
+
         foreach (var item in request.Items)
         {
             order.AddItem(new OrderItem
@@ -52,7 +74,7 @@ public class CreateOrderCommandHandler(IOrderRepository orderRepository, IOrderD
                 ProductId = item.ProductId,
                 Note = item.Note,
                 Quantity = item.Quantity,
-                Price = item.Price,
+                Price = productsById[item.ProductId].Price,
                 CreatedAt = DateTime.UtcNow,
             });
         }

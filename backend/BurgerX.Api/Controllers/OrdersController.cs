@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 
 using BurgerX.Application.Orders.Commands.CreateOrder;
 using BurgerX.Application.Orders.Queries.GetAllOrders;
+using BurgerX.Application.Orders.Queries.GetOrderById;
 
 using Mediator;
 
@@ -19,6 +20,13 @@ public class OrdersController (IMediator mediator) : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var orders = await _mediator.Send(new GetAllOrdersQuery());
+        return Ok(orders);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var orders = await _mediator.Send(new GetOrderByIdQuery(id));
         return Ok(orders);
     }
 

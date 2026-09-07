@@ -1,8 +1,9 @@
+using Mediator;
+
 namespace BurgerX.Application.Orders.Dtos;
 
-public record OrderItemDto(
-    string Product,    
+public record OrderItemAddDto(
+    Guid ProductId,
     int Quantity,
-    decimal Price,
     string? Note
 );

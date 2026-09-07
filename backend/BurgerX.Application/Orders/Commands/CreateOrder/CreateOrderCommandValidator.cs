@@ -18,7 +18,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
             .NotEmpty();
     
         RuleForEach(x => x.Items)
-            .SetValidator(new OrderItemValidator());
+            .SetValidator(new OrderItemAddValidator());
 
         When(x => x.Type == OrderType.Delivery, () =>
         {

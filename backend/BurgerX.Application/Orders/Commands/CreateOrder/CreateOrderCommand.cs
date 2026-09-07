@@ -12,5 +12,5 @@ public record CreateOrderCommand(
     decimal Discount,
     OrderType Type,
     Address? DeliveryAddress,
-    IEnumerable<OrderItemDto> Items
+    IEnumerable<OrderItemAddDto> Items
 ) : IRequest<Guid>, ITranslacionalRequest;
