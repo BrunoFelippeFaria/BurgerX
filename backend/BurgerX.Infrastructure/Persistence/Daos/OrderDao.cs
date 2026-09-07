@@ -30,7 +30,9 @@ public class OrderDao(AppDbContext context) : IOrderDao
 
     public async Task<int> GetNewNumber()
     {
-        return await _context.Orders
-            .MaxAsync(o => o.Number) + 1;
+        var maxNumber = await _context.Orders
+            .MaxAsync(o => (int?)o.Number) ?? 0;
+
+        return maxNumber + 1;
     }
 }
