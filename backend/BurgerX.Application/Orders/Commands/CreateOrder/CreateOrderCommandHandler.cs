@@ -1,5 +1,7 @@
 using BurgerX.Application.Orders.Interfaces;
 using BurgerX.Domain.Entities.Orders;
+using BurgerX.Domain.Enums;
+using BurgerX.Domain.ValueObjects;
 
 using Mediator;
 
@@ -21,9 +23,25 @@ public class CreateOrderCommandHandler(IOrderRepository orderRepository, IOrderD
             Number = await _orderDao.GetNewNumber(),
             Customer = request.Customer,
             Discount = request.Discount,
-            Status = request.Status,
+            Type = request.Type,
+            Status = OrderStatus.Ordered,
             CreatedAt = DateTime.UtcNow,
         };
+
+        if (order.Type == OrderType.Delivery)
+        {
+            var address = request.DeliveryAddress!;
+
+            order.DeliveryAddress = new Address {
+                ZipCode = address.ZipCode,
+                Street = address.Street,
+                Number = address.Number,
+                Complement = address.Complement,
+                Neighborhood = address.Neighborhood,
+                City = address.City,
+                State = address.State,
+            };
+        }
 
         foreach (var item in request.Items)
         {

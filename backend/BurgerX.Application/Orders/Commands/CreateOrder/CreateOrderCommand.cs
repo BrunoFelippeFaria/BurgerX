@@ -11,7 +11,6 @@ public record CreateOrderCommand(
     string Customer,
     decimal Discount,
     OrderType Type,
-    OrderStatus Status,
     Address? DeliveryAddress,
     IEnumerable<OrderItemDto> Items
 ) : IRequest<Guid>, ITranslacionalRequest;
