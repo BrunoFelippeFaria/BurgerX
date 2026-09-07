@@ -1,5 +1,6 @@
 using BurgerX.Application.Catalog.Commands.CreateProduct;
 using BurgerX.Application.Catalog.Interfaces;
+using BurgerX.Application.Orders.Interfaces;
 using BurgerX.Application.Shared.Interfaces;
 using BurgerX.Application.Shared.Mediator;
 using BurgerX.Infrastructure.Persistence;
@@ -27,8 +28,11 @@ public static class Dependencies
         services.AddAppMediator();
 
         services.AddValidatorsFromAssembly(typeof(CreateProductCommandValidator).Assembly);
+        
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IProductDao, ProductDao>();
+        services.AddScoped<IOrderDao, OrderDao>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         return services;
     }
