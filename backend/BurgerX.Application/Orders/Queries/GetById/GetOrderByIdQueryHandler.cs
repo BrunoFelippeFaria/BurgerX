@@ -1,11 +1,8 @@
-
-using BurgerX.Application.Orders.Dtos;
 using BurgerX.Application.Orders.Exceptions;
-using BurgerX.Application.Orders.Interfaces;
 
 using Mediator;
 
-namespace BurgerX.Application.Orders.Queries.GetOrderById;
+namespace BurgerX.Application.Orders.Queries.GetById;
 
 public class GetOrderByIdQueryHandler (IOrderDao orderDao) : IRequestHandler<GetOrderByIdQuery, OrderDto>
 {

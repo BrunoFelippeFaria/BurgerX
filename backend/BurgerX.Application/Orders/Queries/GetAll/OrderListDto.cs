@@ -1,6 +1,6 @@
 using BurgerX.Domain.Enums;
 
-namespace BurgerX.Application.Orders.Dtos;
+namespace BurgerX.Application.Orders.Queries.GetAll;
 
 public record OrderListDto(
     Guid Id,

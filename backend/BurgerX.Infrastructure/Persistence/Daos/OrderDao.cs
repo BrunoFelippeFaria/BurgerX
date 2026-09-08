@@ -1,6 +1,8 @@
 
+using BurgerX.Application.Orders;
 using BurgerX.Application.Orders.Dtos;
-using BurgerX.Application.Orders.Interfaces;
+using BurgerX.Application.Orders.Queries.GetAll;
+using BurgerX.Application.Orders.Queries.GetById;
 
 using Microsoft.EntityFrameworkCore;
 

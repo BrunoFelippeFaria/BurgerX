@@ -1,7 +1,8 @@
+using BurgerX.Application.Orders.Dtos;
 using BurgerX.Domain.Enums;
 using BurgerX.Domain.ValueObjects;
 
-namespace BurgerX.Application.Orders.Dtos;
+namespace BurgerX.Application.Orders.Queries.GetById;
 
 public record OrderDto(
     Guid Id,

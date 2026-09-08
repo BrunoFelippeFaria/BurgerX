@@ -1,5 +1,5 @@
 
-using BurgerX.Application.Orders.Interfaces;
+using BurgerX.Application.Orders;
 using BurgerX.Domain.Entities.Orders;
 
 using Microsoft.EntityFrameworkCore;

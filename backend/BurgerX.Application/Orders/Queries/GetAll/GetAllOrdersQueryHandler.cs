@@ -1,10 +1,6 @@
-
-using BurgerX.Application.Orders.Dtos;
-using BurgerX.Application.Orders.Interfaces;
-
 using Mediator;
 
-namespace BurgerX.Application.Orders.Queries.GetAllOrders;
+namespace BurgerX.Application.Orders.Queries.GetAll;
 
 public class GetAllOrdersQueryHandler(IOrderDao orderDao) : IRequestHandler<GetAllOrdersQuery, IEnumerable<OrderListDto>>
 {

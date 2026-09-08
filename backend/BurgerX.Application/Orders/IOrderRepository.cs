@@ -1,6 +1,6 @@
 using BurgerX.Domain.Entities.Orders;
 
-namespace BurgerX.Application.Orders.Interfaces;
+namespace BurgerX.Application.Orders;
 
 public interface IOrderRepository
 {

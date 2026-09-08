@@ -1,8 +1,6 @@
-using System.Threading.Tasks;
-
 using BurgerX.Application.Orders.Commands.CreateOrder;
-using BurgerX.Application.Orders.Queries.GetAllOrders;
-using BurgerX.Application.Orders.Queries.GetOrderById;
+using BurgerX.Application.Orders.Queries.GetAll;
+using BurgerX.Application.Orders.Queries.GetById;
 
 using Mediator;
 

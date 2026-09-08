@@ -1,6 +1,7 @@
-using BurgerX.Application.Orders.Dtos;
+using BurgerX.Application.Orders.Queries.GetAll;
+using BurgerX.Application.Orders.Queries.GetById;
 
-namespace BurgerX.Application.Orders.Interfaces;
+namespace BurgerX.Application.Orders;
 
 public interface IOrderDao
 {
