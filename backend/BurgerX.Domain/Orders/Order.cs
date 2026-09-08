@@ -1,5 +1,6 @@
-using BurgerX.Domain.Enums;
-using BurgerX.Domain.ValueObjects;
+using BurgerX.Domain.Orders.Enums;
+using BurgerX.Domain.Shared;
+using BurgerX.Domain.Shared.ValueObjects;
 
 namespace BurgerX.Domain.Entities.Orders;
 

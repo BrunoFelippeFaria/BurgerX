@@ -1,4 +1,6 @@
-namespace BurgerX.Domain.Entities;
+using BurgerX.Domain.Shared;
+
+namespace BurgerX.Domain.Catalog.Products;
 
 public class Product : EntityBase
 {

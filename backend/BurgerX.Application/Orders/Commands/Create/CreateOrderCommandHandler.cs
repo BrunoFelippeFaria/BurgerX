@@ -1,8 +1,8 @@
 using BurgerX.Application.Catalog.Products;
 using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Domain.Entities.Orders;
-using BurgerX.Domain.Enums;
-using BurgerX.Domain.ValueObjects;
+using BurgerX.Domain.Orders.Enums;
+using BurgerX.Domain.Shared.ValueObjects;
 
 using Mediator;
 

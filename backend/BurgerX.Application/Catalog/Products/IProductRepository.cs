@@ -1,4 +1,4 @@
-using BurgerX.Domain.Entities;
+using BurgerX.Domain.Catalog.Products;
 
 namespace BurgerX.Application.Catalog.Products;
 

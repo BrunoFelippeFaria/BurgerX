@@ -1,4 +1,4 @@
-using BurgerX.Domain.Exceptions;
+using BurgerX.Domain.Shared.Exceptions;
 
 namespace BurgerX.Application.Orders.Exceptions;
 

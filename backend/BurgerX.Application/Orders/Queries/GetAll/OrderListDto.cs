@@ -1,4 +1,4 @@
-using BurgerX.Domain.Enums;
+using BurgerX.Domain.Orders.Enums;
 
 namespace BurgerX.Application.Orders.Queries.GetAll;
 

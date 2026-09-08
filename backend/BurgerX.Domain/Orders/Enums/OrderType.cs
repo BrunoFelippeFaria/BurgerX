@@ -1,4 +1,4 @@
-namespace BurgerX.Domain.Enums;
+namespace BurgerX.Domain.Orders.Enums;
 
 public enum OrderType : byte
 {

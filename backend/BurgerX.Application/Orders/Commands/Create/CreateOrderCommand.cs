@@ -1,7 +1,7 @@
 using BurgerX.Application.Orders.Dtos;
 using BurgerX.Application.Shared.Interfaces;
-using BurgerX.Domain.Enums;
-using BurgerX.Domain.ValueObjects;
+using BurgerX.Domain.Orders.Enums;
+using BurgerX.Domain.Shared.ValueObjects;
 
 using Mediator;
 

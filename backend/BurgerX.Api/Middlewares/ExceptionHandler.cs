@@ -1,7 +1,7 @@
 
 using System.Net;
 
-using BurgerX.Domain.Exceptions;
+using BurgerX.Domain.Shared.Exceptions;
 
 namespace BurgerX.Api.Middlewares;
 

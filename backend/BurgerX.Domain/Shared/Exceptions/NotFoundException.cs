@@ -1,4 +1,4 @@
-namespace BurgerX.Domain.Exceptions;
+namespace BurgerX.Domain.Shared.Exceptions;
 
 public class NotFoundException(string message) : DomainException(message)
 {

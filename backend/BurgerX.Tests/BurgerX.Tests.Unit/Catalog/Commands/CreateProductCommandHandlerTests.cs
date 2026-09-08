@@ -1,7 +1,7 @@
 using BurgerX.Application.Catalog.Products;
 using BurgerX.Application.Catalog.Products.Commands.Create;
 using BurgerX.Application.Catalog.Products.Exceptions;
-using BurgerX.Domain.Entities;
+using BurgerX.Domain.Catalog.Products;
 
 using FluentAssertions;
 

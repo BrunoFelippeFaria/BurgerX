@@ -1,4 +1,5 @@
 using BurgerX.Application.Catalog.Products.Exceptions;
+using BurgerX.Domain.Catalog.Products;
 using BurgerX.Domain.Entities;
 
 using Mediator;

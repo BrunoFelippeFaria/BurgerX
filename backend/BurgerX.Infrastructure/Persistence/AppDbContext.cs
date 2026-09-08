@@ -1,4 +1,4 @@
-using BurgerX.Domain.Entities;
+using BurgerX.Domain.Catalog.Products;
 using BurgerX.Domain.Entities.Orders;
 using BurgerX.Infrastructure.Persistence.EntityConfiguration;
 

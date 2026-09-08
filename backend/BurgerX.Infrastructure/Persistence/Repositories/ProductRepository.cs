@@ -1,5 +1,5 @@
 using BurgerX.Application.Catalog.Products;
-using BurgerX.Domain.Entities;
+using BurgerX.Domain.Catalog.Products;
 
 using Microsoft.EntityFrameworkCore;
 

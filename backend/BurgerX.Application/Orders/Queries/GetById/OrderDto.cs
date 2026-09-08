@@ -1,6 +1,6 @@
 using BurgerX.Application.Orders.Dtos;
-using BurgerX.Domain.Enums;
-using BurgerX.Domain.ValueObjects;
+using BurgerX.Domain.Orders.Enums;
+using BurgerX.Domain.Shared.ValueObjects;
 
 namespace BurgerX.Application.Orders.Queries.GetById;
 

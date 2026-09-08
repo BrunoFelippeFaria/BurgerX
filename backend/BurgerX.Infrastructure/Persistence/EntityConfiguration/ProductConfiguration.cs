@@ -1,4 +1,4 @@
-using BurgerX.Domain.Entities;
+using BurgerX.Domain.Catalog.Products;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

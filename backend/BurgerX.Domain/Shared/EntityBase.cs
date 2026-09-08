@@ -1,4 +1,4 @@
-namespace BurgerX.Domain.Entities;
+namespace BurgerX.Domain.Shared;
 
 public class EntityBase
 {

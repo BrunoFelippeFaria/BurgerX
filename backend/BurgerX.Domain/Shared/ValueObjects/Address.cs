@@ -1,4 +1,4 @@
-namespace BurgerX.Domain.ValueObjects;
+namespace BurgerX.Domain.Shared.ValueObjects;
 
 public class Address
 {

@@ -1,3 +1,6 @@
+using BurgerX.Domain.Catalog.Products;
+using BurgerX.Domain.Shared;
+
 namespace BurgerX.Domain.Entities.Orders;
 
 public class OrderItem : EntityBase

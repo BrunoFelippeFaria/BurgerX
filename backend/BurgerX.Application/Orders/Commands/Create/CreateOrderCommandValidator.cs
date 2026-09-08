@@ -1,4 +1,5 @@
-using BurgerX.Domain.Enums;
+using BurgerX.Domain.Orders.Enums;
+
 using FluentValidation;
 
 namespace BurgerX.Application.Orders.Commands.CreateOrder;
