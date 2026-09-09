@@ -63,7 +63,6 @@ public class CreateOrderCommandHandler(
             };
         }
 
-
         foreach (var item in request.Items)
         {
             order.AddItem(new OrderItem
