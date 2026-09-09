@@ -7,7 +7,7 @@ using FluentAssertions;
 
 using NSubstitute;
 
-namespace BurgerX.Tests.Unit.Catalog.Commands;
+namespace BurgerX.Tests.Unit.Catalog.Products.Commands;
 
 public class CreateProductCommandHandlerTests
 {
