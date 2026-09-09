@@ -1,10 +1,11 @@
+using BurgerX.Application.Auth;
 using BurgerX.Domain.Administration;
 
 using Microsoft.EntityFrameworkCore;
 
 namespace BurgerX.Infrastructure.Persistence.Repositories;
 
-public class UserRepository(AppDbContext context)
+public class UserRepository(AppDbContext context) : IUserRepository
 {
     private readonly AppDbContext _context = context;
 

@@ -1,3 +1,4 @@
+using BurgerX.Application.Auth;
 using BurgerX.Application.Catalog.Products;
 using BurgerX.Application.Catalog.Products.Commands.Create;
 using BurgerX.Application.Orders;
@@ -7,6 +8,7 @@ using BurgerX.Infrastructure.Auth;
 using BurgerX.Infrastructure.Persistence;
 using BurgerX.Infrastructure.Persistence.Daos;
 using BurgerX.Infrastructure.Persistence.Repositories;
+using BurgerX.Infrastructure.Security;
 
 using FluentValidation;
 
@@ -30,6 +32,8 @@ public static class Dependencies
             .ValidateOnStart();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IHasher, PasswordHasher>();
+        services.AddScoped<ITokenService, JwtTokenService>();
 
         services.AddAppMediator();
 
@@ -39,6 +43,7 @@ public static class Dependencies
         services.AddScoped<IProductDao, ProductDao>();
         services.AddScoped<IOrderDao, OrderDao>();
         services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }
