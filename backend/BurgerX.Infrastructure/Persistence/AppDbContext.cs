@@ -1,3 +1,4 @@
+using BurgerX.Domain.Administration;
 using BurgerX.Domain.Catalog.Products;
 using BurgerX.Domain.Entities.Orders;
 using BurgerX.Infrastructure.Persistence.EntityConfiguration;
@@ -15,5 +16,5 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
     public DbSet<Product> Products { get; set; }
     public DbSet<Order> Orders { get; set; }
-
+    public DbSet<User> Users { get; set; }
 }
