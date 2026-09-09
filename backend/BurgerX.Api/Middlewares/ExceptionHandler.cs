@@ -26,6 +26,9 @@ public class ExceptionHandler(RequestDelegate next)
             else if (ex is ConflictException)
                 statusCode = HttpStatusCode.Conflict;
 
+            else if (ex is UnauthorizedException)
+                statusCode = HttpStatusCode.Unauthorized;
+
             await HandleError(context, statusCode, ex.Message, ex.Code);
         }
 
