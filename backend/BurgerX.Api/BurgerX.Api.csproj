@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
     <ProjectReference Include="..\BurgerX.CrossCutting\BurgerX.CrossCutting.csproj" />
@@ -15,6 +15,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>42d65103-c21a-47f5-920b-7019e2f22174</UserSecretsId>
   </PropertyGroup>
 
 </Project>

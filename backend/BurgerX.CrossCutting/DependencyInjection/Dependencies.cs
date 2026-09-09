@@ -3,6 +3,7 @@ using BurgerX.Application.Catalog.Products.Commands.Create;
 using BurgerX.Application.Orders;
 using BurgerX.Application.Shared.Interfaces;
 using BurgerX.Application.Shared.Mediator;
+using BurgerX.Infrastructure.Auth;
 using BurgerX.Infrastructure.Persistence;
 using BurgerX.Infrastructure.Persistence.Daos;
 using BurgerX.Infrastructure.Persistence.Repositories;
@@ -22,6 +23,11 @@ public static class Dependencies
         services.AddDbContext<AppDbContext>(options =>
             options.UseSqlite(configuration.GetConnectionString("Default"))
         );
+
+        services.AddOptions<JwtOptions>()
+            .BindConfiguration("Jwt")
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
