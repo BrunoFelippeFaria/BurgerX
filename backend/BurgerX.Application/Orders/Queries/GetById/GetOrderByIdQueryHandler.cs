@@ -4,7 +4,7 @@ using Mediator;
 
 namespace BurgerX.Application.Orders.Queries.GetById;
 
-public class GetOrderByIdQueryHandler (IOrderDao orderDao) : IRequestHandler<GetOrderByIdQuery, OrderDto>
+public class GetOrderByIdQueryHandler(IOrderDao orderDao) : IRequestHandler<GetOrderByIdQuery, OrderDto>
 {
     private readonly IOrderDao _orderDao = orderDao;
 

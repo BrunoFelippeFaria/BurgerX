@@ -12,7 +12,7 @@ public class DeleteProductCommandHandler(IProductRepository productRepository) :
     {
         var product = await _productRepository.GetById(request.Id)
             ?? throw new ProductNotFoundException(request.Id);
-            
+
         product.Delete();
 
         return Unit.Value;

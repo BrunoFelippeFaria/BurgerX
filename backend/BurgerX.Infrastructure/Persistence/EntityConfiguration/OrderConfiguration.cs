@@ -13,7 +13,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         builder.HasKey(p => p.Id);
         builder.HasQueryFilter(p => p.IsDeleted == false);
-        
+
         builder.OwnsOne(x => x.DeliveryAddress);
     }
 }

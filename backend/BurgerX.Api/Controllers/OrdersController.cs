@@ -10,7 +10,7 @@ namespace BurgerX.Api.Controllers;
 
 [ApiController]
 [Route("orders")]
-public class OrdersController (IMediator mediator) : ControllerBase
+public class OrdersController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
 
@@ -32,7 +32,7 @@ public class OrdersController (IMediator mediator) : ControllerBase
     public async Task<IActionResult> Create(CreateOrderCommand command)
     {
         var id = await _mediator.Send(command);
-        
+
         return Created(
             $"/orders/{id}",
             new { id }

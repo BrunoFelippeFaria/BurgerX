@@ -17,7 +17,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
         RuleFor(x => x.Items)
             .NotEmpty();
-    
+
         RuleForEach(x => x.Items)
             .SetValidator(new OrderItemAddValidator());
 
@@ -26,11 +26,11 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
             RuleFor(x => x.DeliveryAddress)
                 .NotNull();
         })
-    
+
         .Otherwise(() =>
         {
             RuleFor(x => x.DeliveryAddress)
                 .Null();
-        });    
+        });
     }
 }

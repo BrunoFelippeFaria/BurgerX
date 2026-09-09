@@ -28,7 +28,8 @@ public class CreateProductCommandHandlerTests
     {
         _productDao.NameExists(Arg.Any<string>()).Returns(false);
 
-        var cmd = new CreateProductCommand {
+        var cmd = new CreateProductCommand
+        {
             Name = "name",
             Description = "desc",
             Price = 10
@@ -51,7 +52,8 @@ public class CreateProductCommandHandlerTests
     {
         _productDao.NameExists(Arg.Any<string>()).Returns(true);
 
-        var cmd = new CreateProductCommand {
+        var cmd = new CreateProductCommand
+        {
             Name = "name",
             Description = "desc",
             Price = 10

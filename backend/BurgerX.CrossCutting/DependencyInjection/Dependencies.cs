@@ -24,11 +24,11 @@ public static class Dependencies
         );
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        
+
         services.AddAppMediator();
 
         services.AddValidatorsFromAssembly(typeof(CreateProductCommandValidator).Assembly);
-        
+
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IProductDao, ProductDao>();
         services.AddScoped<IOrderDao, OrderDao>();

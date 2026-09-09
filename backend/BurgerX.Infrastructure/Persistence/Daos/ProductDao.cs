@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BurgerX.Infrastructure.Persistence.Daos;
 
-public class ProductDao (AppDbContext context) : IProductDao
+public class ProductDao(AppDbContext context) : IProductDao
 {
     private readonly AppDbContext _context = context;
 

@@ -12,7 +12,7 @@ namespace BurgerX.Api.Controllers.Catalog;
 
 [ApiController]
 [Route("catalog/products")]
-public class ProductsController (IMediator mediator) : ControllerBase
+public class ProductsController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
 

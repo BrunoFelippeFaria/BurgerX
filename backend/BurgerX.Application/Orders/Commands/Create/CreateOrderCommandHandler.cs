@@ -12,7 +12,7 @@ public class CreateOrderCommandHandler(
     IOrderRepository orderRepository,
     IOrderDao orderDao,
     IProductRepository productRepository
-) 
+)
     : IRequestHandler<CreateOrderCommand, Guid>
 {
     private readonly IOrderRepository _orderRepository = orderRepository;
@@ -52,7 +52,8 @@ public class CreateOrderCommandHandler(
         {
             var address = request.DeliveryAddress!;
 
-            order.DeliveryAddress = new Address {
+            order.DeliveryAddress = new Address
+            {
                 ZipCode = address.ZipCode,
                 Street = address.Street,
                 Number = address.Number,

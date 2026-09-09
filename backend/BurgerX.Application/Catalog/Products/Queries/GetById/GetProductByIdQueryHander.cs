@@ -12,7 +12,7 @@ public class GetProductByIdQueryHandler(IProductDao productDao) : IRequestHandle
     {
         var product = await _productDao.GetById(request.Id)
             ?? throw new ProductNotFoundException(request.Id);
-            
+
         return product;
     }
 }

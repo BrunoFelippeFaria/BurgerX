@@ -6,7 +6,7 @@ using Mediator;
 
 namespace BurgerX.Application.Catalog.Products.Commands.Create;
 
-public class CreateProductCommandHandler (IProductRepository productRepository, IProductDao productDao) 
+public class CreateProductCommandHandler(IProductRepository productRepository, IProductDao productDao)
     : IRequestHandler<CreateProductCommand, Guid>
 {
     private readonly IProductRepository _productRepository = productRepository;

@@ -4,7 +4,7 @@ using Mediator;
 
 namespace BurgerX.Application.Catalog.Products.Queries.GetAll;
 
-public class GetAllProductsQueryHandler (IProductDao productDao) : IRequestHandler<GetAllProductsQuery, IEnumerable<ProductListDto>>
+public class GetAllProductsQueryHandler(IProductDao productDao) : IRequestHandler<GetAllProductsQuery, IEnumerable<ProductListDto>>
 {
     private readonly IProductDao _productDao = productDao;
 

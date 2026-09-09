@@ -4,7 +4,7 @@ using Mediator;
 
 namespace BurgerX.Application.Catalog.Products.Commands.Update;
 
-public class UpdateProductCommandHandler (IProductRepository productRepository, IProductDao productDao) 
+public class UpdateProductCommandHandler(IProductRepository productRepository, IProductDao productDao)
     : IRequestHandler<UpdateProductCommand, Unit>
 {
     private readonly IProductRepository _productRepository = productRepository;

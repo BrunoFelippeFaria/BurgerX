@@ -89,7 +89,7 @@ public class CreateOrderCommandHandlerTests
         capturedOrder.Should().NotBeNull();
         capturedOrder!.Total.Should().Be(expectedTotal);
     }
-    
+
     [Fact]
     public async Task Handle_Sucess_ShouldReturnId()
     {

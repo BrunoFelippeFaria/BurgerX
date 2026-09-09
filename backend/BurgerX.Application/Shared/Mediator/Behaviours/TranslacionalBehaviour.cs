@@ -6,7 +6,7 @@ using Mediator;
 
 namespace BurgerX.Application.Shared.Mediator.Behaviours;
 
-public class TranslacionalBehaviour<TMessage, TResponse> (IUnitOfWork uow) : IPipelineBehavior<TMessage, TResponse>
+public class TranslacionalBehaviour<TMessage, TResponse>(IUnitOfWork uow) : IPipelineBehavior<TMessage, TResponse>
     where TMessage : IMessage
 {
     private readonly IUnitOfWork _uow = uow;

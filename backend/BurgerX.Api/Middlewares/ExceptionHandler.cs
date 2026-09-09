@@ -41,11 +41,11 @@ public class ExceptionHandler(RequestDelegate next)
                     field = e.PropertyName,
                     message = e.ErrorMessage
                 })
-            });        
+            });
 
         }
     }
-    
+
     private static async Task HandleError(HttpContext context, HttpStatusCode statusCode, string error, string code)
     {
         context.Response.StatusCode = (int)statusCode;
@@ -54,6 +54,6 @@ public class ExceptionHandler(RequestDelegate next)
         {
             error,
             code
-        });        
+        });
     }
 }
