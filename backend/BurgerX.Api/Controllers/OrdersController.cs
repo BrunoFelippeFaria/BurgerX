@@ -4,12 +4,14 @@ using BurgerX.Application.Orders.Queries.GetById;
 
 using Mediator;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerX.Api.Controllers;
 
 [ApiController]
 [Route("orders")]
+[Authorize]
 public class OrdersController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;

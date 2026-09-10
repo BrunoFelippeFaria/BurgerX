@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 
+using BurgerX.Api.Extensions;
 using BurgerX.Api.Middlewares;
 using BurgerX.CrossCutting.DependencyInjection;
 
@@ -11,7 +12,13 @@ builder.Services.AddControllers()
         new JsonStringEnumConverter()
     ));
 
+builder.Services.AddAuth(builder.Configuration);
+
 var app = builder.Build();
 app.UseMiddleware<ExceptionHandler>();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapControllers();
 app.Run();

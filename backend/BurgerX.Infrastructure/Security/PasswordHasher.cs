@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BurgerX.Infrastructure.Security;
 
-public class PasswordHasher(PasswordHasher<object> passwordHasher) : IHasher
+public class PasswordHasher() : IHasher
 {
-    private readonly PasswordHasher<object> _passwordHasher = passwordHasher;
+    private readonly PasswordHasher<object> _passwordHasher = new();
 
     public string Hash(string value)
     {

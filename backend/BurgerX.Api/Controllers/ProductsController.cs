@@ -6,12 +6,15 @@ using BurgerX.Application.Catalog.Products.Queries.GetById;
 
 using Mediator;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BurgerX.Api.Controllers.Catalog;
+namespace BurgerX.Api.Controllers;
 
 [ApiController]
 [Route("catalog/products")]
+[Authorize]
+
 public class ProductsController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
