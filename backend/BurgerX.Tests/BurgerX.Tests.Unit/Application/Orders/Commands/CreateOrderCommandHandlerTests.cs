@@ -10,7 +10,7 @@ using FluentAssertions;
 
 using NSubstitute;
 
-namespace BurgerX.Tests.Unit.Orders.Commands;
+namespace BurgerX.Tests.Unit.Application.Orders.Commands;
 
 public class CreateOrderCommandHandlerTests
 {

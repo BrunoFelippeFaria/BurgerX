@@ -6,7 +6,7 @@ using FluentAssertions;
 
 using NSubstitute;
 
-namespace BurgerX.Tests.Unit.Catalog.Products.Queries;
+namespace BurgerX.Tests.Unit.Application.Catalog.Products.Queries;
 
 public class GetProductByIdQueryHandlerTests
 {
