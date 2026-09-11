@@ -1,4 +1,4 @@
-using BurgerX.Application.Orders.Dtos;
+using BurgerX.Application.Orders.Commands.Create;
 using BurgerX.Domain.Orders.Enums;
 using BurgerX.Domain.Shared.ValueObjects;
 

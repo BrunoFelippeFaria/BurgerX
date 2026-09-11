@@ -6,7 +6,7 @@ using BurgerX.Domain.Shared.ValueObjects;
 
 using Mediator;
 
-namespace BurgerX.Application.Orders.Commands.CreateOrder;
+namespace BurgerX.Application.Orders.Commands.Create;
 
 public class CreateOrderCommandHandler(
     IOrderRepository orderRepository,

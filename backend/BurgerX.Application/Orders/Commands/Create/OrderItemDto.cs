@@ -1,4 +1,4 @@
-namespace BurgerX.Application.Orders.Dtos;
+namespace BurgerX.Application.Orders.Commands.Create;
 
 public record OrderItemDto(
     string Product,

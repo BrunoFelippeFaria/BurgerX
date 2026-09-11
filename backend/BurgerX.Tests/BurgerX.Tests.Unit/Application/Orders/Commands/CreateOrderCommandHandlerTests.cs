@@ -1,7 +1,7 @@
 using BurgerX.Application.Catalog.Products;
 using BurgerX.Application.Catalog.Products.Exceptions;
 using BurgerX.Application.Orders;
-using BurgerX.Application.Orders.Commands.CreateOrder;
+using BurgerX.Application.Orders.Commands.Create;
 using BurgerX.Domain.Catalog.Products;
 using BurgerX.Domain.Entities.Orders;
 using BurgerX.Domain.Orders.Enums;

@@ -2,7 +2,7 @@ using BurgerX.Domain.Orders.Enums;
 
 using FluentValidation;
 
-namespace BurgerX.Application.Orders.Commands.CreateOrder;
+namespace BurgerX.Application.Orders.Commands.Create;
 
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 {

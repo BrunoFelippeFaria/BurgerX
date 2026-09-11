@@ -1,8 +1,6 @@
-using BurgerX.Application.Orders.Dtos;
-
 using FluentValidation;
 
-namespace BurgerX.Application.Orders.Commands.CreateOrder;
+namespace BurgerX.Application.Orders.Commands.Create;
 
 public class OrderItemAddValidator : AbstractValidator<OrderItemAddDto>
 {

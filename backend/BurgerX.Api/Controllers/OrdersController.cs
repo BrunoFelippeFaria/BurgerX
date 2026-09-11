@@ -1,4 +1,4 @@
-using BurgerX.Application.Orders.Commands.CreateOrder;
+using BurgerX.Application.Orders.Commands.Create;
 using BurgerX.Application.Orders.Queries.GetAll;
 using BurgerX.Application.Orders.Queries.GetById;
 

@@ -1,6 +1,6 @@
 using Mediator;
 
-namespace BurgerX.Application.Orders.Dtos;
+namespace BurgerX.Application.Orders.Commands.Create;
 
 public record OrderItemAddDto(
     Guid ProductId,
