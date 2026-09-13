@@ -1,6 +1,6 @@
 
 using BurgerX.Application.Orders;
-using BurgerX.Application.Orders.Dtos;
+using BurgerX.Application.Orders.Commands.Create;
 using BurgerX.Application.Orders.Queries.GetAll;
 using BurgerX.Application.Orders.Queries.GetById;
 
