@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 namespace BurgerX.Api.Controllers;
 
 [ApiController]
-[Route("auth")]
+[Route("api/auth")]
 public class AuthController (IMediator mediator, IOptions<JwtOptions> jwtOptions) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BurgerX.Api.Controllers;
 
 [ApiController]
-[Route("orders")]
+[Route("api/orders")]
 [Authorize]
 public class OrdersController(IMediator mediator) : ControllerBase
 {

@@ -8,6 +8,9 @@ burgerx.db
 burgerx.db-shm
 burgerx.db-wal
 
+# static files
+**/wwwroot/*
+
 # dotenv files
 .env
 

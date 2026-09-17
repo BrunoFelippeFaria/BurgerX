@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BurgerX.Api.Controllers;
 
 [ApiController]
-[Route("catalog/products")]
+[Route("api/catalog/products")]
 [Authorize]
 
 public class ProductsController(IMediator mediator) : ControllerBase
